@@ -93,6 +93,15 @@ a {
 
 .container {
 	padding: 0 15px;
+	
+	@media(min-width: 768px) {
+		padding: 0 48px;
+	}
+	
+	@media(min-width: 1024px) {
+		max-width: 1270px;
+		margin: 0 auto;
+	}
 }
 
 .header {
@@ -132,7 +141,7 @@ a {
 		background: $gray;
 		z-index: 1;
 		transition: $tr;
-
+		
 		
 		&.active {
 			transform: translateX(0);
@@ -140,27 +149,32 @@ a {
 		}
 	}
 	
-	&-list{
+	&-list {
 		text-align: center;
 		font-size: 30px;
 		line-height: 35px;
-		&__item{
+		
+		&__item {
 			display: block;
 			margin-bottom: 30px;
 		}
 	}
 	
-	&-contacts{
+	&-contacts {
 		display: flex;
 		
-		&__item{
+		&__item {
 			display: flex;
 			align-items: center;
 			margin-left: 30px;
 			
-			& svg{
+			& svg {
 				margin-right: 10px;
 			}
+		}
+		
+		&__item:first-child {
+			margin: 0;
 		}
 	}
 	
@@ -217,6 +231,56 @@ a {
 				bottom: 50%;
 				transform: rotate(45deg);
 			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.header {
+		justify-content: left;
+		
+		&-menu {
+			transform: translateX(0);
+			position: relative;
+			top: auto;
+			left: auto;
+			height: auto;
+			flex-direction: row;
+			justify-content: space-between;
+			width: 100%;
+		}
+		
+		&-list {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			font-size: 16px;
+			line-height: 18px;
+			
+			&__item {
+				margin: 0 0 0 30px;
+			}
+			
+			& li:nth-child(4) {
+				margin-left: auto;
+			}
+		}
+		
+		&-contacts {
+			display: flex;
+			
+			&__item {
+				margin-left: 30px;
+				white-space: nowrap;
+			}
+			
+			&__item:first-child {
+				margin-left: 30px;
+			}
+		}
+		
+		&-btn {
+			display: none;
 		}
 	}
 }
