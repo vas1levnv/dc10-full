@@ -772,7 +772,7 @@ h3 {
 	&__text {
 		margin-bottom: 60px;
 		text-align: center;
-
+		
 		
 		&-title {
 			margin-bottom: 20px;
@@ -786,7 +786,7 @@ h3 {
 		}
 	}
 	
-	&__content{
+	&__content {
 		padding-left: 15px;
 	}
 	
@@ -851,8 +851,8 @@ h3 {
 			transition: $tr;
 			position: absolute;
 			top: 0;
-			left: 15px;
-			width: calc(100% - 15px);
+			left: 0;
+			width: 100%;
 			height: fit-content;
 			pointer-events: none;
 			
@@ -873,9 +873,8 @@ h3 {
 				
 				&-content {
 					position: relative;
-					
+					overflow: hidden;
 				}
-				
 				
 				&-text {
 					position: absolute;
@@ -935,28 +934,87 @@ h3 {
 	.home-swiper {
 		&__buttons {
 			&-wrapper {
+				position: relative;
+				
 				& .btn {
 					display: block !important;
-					width: min-content;
+					width: 230px;
 					white-space: nowrap;
+					margin: 0;
+				}
+				
+				&:before {
+					content: '';
+					position: absolute;
+					top: -200px;
+					left: 14px;
+					width: 2px;
+					height: 190px;
+					background: $black;
+				}
+				
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: -200px;
+					left: 14px;
+					width: 2px;
+					height: 190px;
+					background: $black;
 				}
 			}
 		}
 		
-		&__content{
+		&__content {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			padding-left: 48px;
 		}
 		
-		&__items{
-			&-wrapper{
-				width: 30%;
+		&__items {
+			&-wrapper {
+				width: 45%;
 			}
 		}
 		
 		& .btn {
 			display: none;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.home-swiper {
+		&__content {
+		}
+		
+		&__items {
+			&-wrapper {
+				width: 60%;
+			}
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.home-swiper {
+		&__content {
+			padding-left: 15%;
+		}
+		
+		&__items {
+			&-wrapper {
+				width: 80%;
+			}
+		}
+	}
+}
+
+@media (min-width: 1920px) {
+	.home-swiper {
+		&__content {
+			padding-left: 20%;
 		}
 	}
 }

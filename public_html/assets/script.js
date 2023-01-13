@@ -39,7 +39,16 @@ $(document).ready(function() {
 		loop: true,
 		breakpoints:{
 			768:{
-				slidesPerView: 1.5,
+				slidesPerView: 1.3,
+			},
+			1024:{
+				slidesPerView: 2.2,
+			},
+			1440:{
+				slidesPerView: 3.3,
+			},
+			1920:{
+				slidesPerView: 4.3,
 			}
 		}
 	})
