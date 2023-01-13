@@ -991,7 +991,7 @@ h3 {
 		
 		&__items {
 			&-wrapper {
-				width: 60%;
+				width: 50%;
 			}
 		}
 	}
@@ -1005,7 +1005,7 @@ h3 {
 		
 		&__items {
 			&-wrapper {
-				width: 80%;
+				width: 60%;
 			}
 		}
 	}
@@ -1015,6 +1015,35 @@ h3 {
 	.home-swiper {
 		&__content {
 			padding-left: 20%;
+		}
+	}
+}
+
+.card {
+	padding: 30px 0;
+	
+	&-img {
+		width: 95%;
+		margin: 0 auto 40px;
+		text-align: center;
+		
+		&__title {
+		
+		}
+	}
+	
+	&-content {
+		text-align: center;
+		&__title {
+			font-size: 20px;
+			line-height: 23px;
+			font-family: $times;
+			text-transform: uppercase;
+			margin-bottom: 15px;
+		}
+		
+		& .input{
+		
 		}
 	}
 }
