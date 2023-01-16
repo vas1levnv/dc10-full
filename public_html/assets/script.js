@@ -8,7 +8,7 @@ $(document).ready(function() {
 	
 	$('.header-search').on("click", function() {
 		$('.header-search__content-wrapper').toggleClass('active')
-		$('.header-search__content-wrapper').on("click", function(e){
+		$('.header-search__content-wrapper').on("click", function(e) {
 			e.stopPropagation()
 		})
 		$('.header-menu').removeClass('active')
@@ -16,7 +16,7 @@ $(document).ready(function() {
 	})
 	
 	// свайпер
-	$('#shops').on('click', function(){
+	$('#shops').on('click', function() {
 		$('#shops').addClass('active')
 		$('#swiper-shops').addClass('active')
 		$('#food').removeClass('active')
@@ -25,7 +25,7 @@ $(document).ready(function() {
 		$('#swiper-entertainment').removeClass('active')
 	})
 	
-	$('#food').on('click', function(){
+	$('#food').on('click', function() {
 		$('#food').addClass('active')
 		$('#swiper-food').addClass('active')
 		$('#swiper-shops').removeClass('active')
@@ -34,7 +34,7 @@ $(document).ready(function() {
 		$('#swiper-entertainment').removeClass('active')
 	})
 	
-	$('#entertainment').on('click', function(){
+	$('#entertainment').on('click', function() {
 		$('#entertainment').addClass('active')
 		$('#swiper-entertainment').addClass('active')
 		$('#shops').removeClass('active')
@@ -47,19 +47,26 @@ $(document).ready(function() {
 		slidesPerView: 2.2,
 		spaceBetween: 6,
 		loop: true,
-		breakpoints:{
-			768:{
+		breakpoints: {
+			768: {
 				slidesPerView: 1.3,
 			},
-			1024:{
+			1024: {
 				slidesPerView: 2.2,
 			},
-			1440:{
+			1440: {
 				slidesPerView: 3.3,
 			},
-			1920:{
+			1920: {
 				slidesPerView: 4.3,
 			}
 		}
 	})
+	
+	//shop
+	$('.shop__button').on('click', function() {
+		$('.shop__button').toggleClass('shop__button_loading')
+	})
+	
+	$('.shop__button_loading').prop('disabled', true);
 })
