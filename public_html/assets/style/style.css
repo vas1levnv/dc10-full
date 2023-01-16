@@ -77,7 +77,7 @@ main {
   text-transform: uppercase;
   color: white;
   cursor: pointer;
-  transition: all 0.6s ease;
+  transition: all 0.3s ease;
 }
 .btn:hover {
   background: #272727;
@@ -186,6 +186,33 @@ h3 {
   padding: 20px 0;
   position: relative;
 }
+.header-search {
+  cursor: pointer;
+}
+.header-search__content {
+  padding: 80px 0;
+  text-align: center;
+}
+.header-search__content-wrapper {
+  transform: translateX(-100%);
+  position: fixed;
+  top: 67px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 67px);
+  transition: all 0.3s ease;
+  background: radial-gradient(77.86% 50.06% at 50% 49.94%, rgba(85, 85, 85, 0.5) 0%, rgba(39, 39, 39, 0) 100%), #272727;
+  z-index: 9;
+}
+.header-search__content-wrapper.active {
+  transform: translateX(0);
+}
+.header-search__content-title {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 100px;
+  text-transform: uppercase;
+}
 .header-logo {
   position: absolute;
   bottom: -45px;
@@ -213,11 +240,11 @@ h3 {
   height: calc(100vh - 67px);
   background: #272727;
   z-index: 1;
-  transition: all 0.6s ease;
+  transition: all 0.3s ease;
+  padding: 95px 0 50px;
 }
 .header-menu.active {
   transform: translateX(0);
-  padding: 95px 0 50px;
 }
 .header-list {
   text-align: center;
@@ -256,7 +283,7 @@ h3 {
   height: 2px;
   background: white;
   width: 100%;
-  transition: all 0.6s ease;
+  transition: all 0.3s ease;
 }
 .header-btn span {
   position: absolute;
@@ -266,7 +293,7 @@ h3 {
   width: 100%;
   transform: translate(0, -50%);
   opacity: 1;
-  transition: all 0.6s ease;
+  transition: all 0.3s ease;
 }
 .header-btn:after {
   content: "";
@@ -276,7 +303,7 @@ h3 {
   height: 2px;
   background: white;
   width: 100%;
-  transition: all 0.6s ease;
+  transition: all 0.3s ease;
 }
 .header-btn.active:before {
   transform: rotate(-45deg);
@@ -294,6 +321,10 @@ h3 {
   .header {
     justify-content: left;
   }
+  .header-search {
+    display: flex;
+    align-items: center;
+  }
   .header-menu {
     transform: translateX(0);
     position: relative;
@@ -303,6 +334,7 @@ h3 {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    padding: 1.5px 0;
   }
   .header-list {
     display: flex;
@@ -667,11 +699,11 @@ h3 {
   height: 20px;
   margin-left: 40px;
   margin-bottom: 15px;
-  transition: all 0.6s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 .home-swiper__buttons-item:before {
-  transition: all 0.6s ease;
+  transition: all 0.3s ease;
   content: "";
   position: absolute;
   top: 4px;
@@ -702,7 +734,7 @@ h3 {
 }
 .home-swiper__items-el {
   opacity: 0;
-  transition: all 0.6s ease;
+  transition: all 0.3s ease;
   position: absolute;
   top: 0;
   left: 0;

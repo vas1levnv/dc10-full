@@ -179,6 +179,37 @@ h3 {
 	padding: 20px 0;
 	position: relative;
 	
+	&-search {
+		cursor: pointer;
+		&__content {
+			padding: 80px 0;
+			text-align: center;
+			
+			&-wrapper {
+				transform: translateX(-100%);
+				position: fixed;
+				top: 67px;
+				left: 0;
+				width: 100vw;
+				height: calc(100vh - 67px);
+				transition: $tr;
+				background: radial-gradient(77.86% 50.06% at 50% 49.94%, rgba(85, 85, 85, 0.5) 0%, rgba(39, 39, 39, 0) 100%), #272727;
+				z-index: 9;
+				
+				&.active {
+					transform: translateX(0);
+				}
+			}
+			
+			&-title{
+				font-size: 24px;
+				line-height: 28px;
+				margin-bottom: 100px;
+				text-transform: uppercase;
+			}
+		}
+	}
+	
 	&-logo {
 		position: absolute;
 		bottom: -45px;
@@ -209,11 +240,11 @@ h3 {
 		background: $gray;
 		z-index: 1;
 		transition: $tr;
-		
+		padding: 95px 0 50px;
 		
 		&.active {
 			transform: translateX(0);
-			padding: 95px 0 50px;
+			
 		}
 	}
 	
@@ -307,6 +338,12 @@ h3 {
 	.header {
 		justify-content: left;
 		
+		
+		&-search {
+			display: flex;
+			align-items: center;
+		}
+		
 		&-menu {
 			transform: translateX(0);
 			position: relative;
@@ -316,6 +353,7 @@ h3 {
 			flex-direction: row;
 			justify-content: space-between;
 			width: 100%;
+			padding: 1.5px 0;
 		}
 		
 		&-list {
@@ -386,7 +424,6 @@ h3 {
 		max-width: 144px;
 	}
 }
-
 
 @media (min-width: $m) {
 	.home-banner {
@@ -1090,7 +1127,7 @@ h3 {
 			font-weight: 400;
 		}
 		
-		&__description{
+		&__description {
 			font-size: 14px;
 			line-height: 150%;
 		}
@@ -1167,17 +1204,18 @@ h3 {
 		max-width: 470px;
 		margin: 0 auto;
 		
-		&-content{
-			&__title{
+		&-content {
+			&__title {
 				font-size: 36px;
 				line-height: 41px;
 			}
-			&__description{
+			
+			&__description {
 				font-size: 16px;
 				line-height: 150%;
 			}
 			
-			&-checkbox{
+			&-checkbox {
 				font-size: 16px;
 				line-height: 150%;
 			}
@@ -1200,7 +1238,7 @@ h3 {
 		align-items: center;
 		justify-content: space-between;
 		
-		&-title{
+		&-title {
 			margin-right: 60px;
 			font-size: 16px;
 		}

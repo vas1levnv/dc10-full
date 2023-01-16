@@ -1,11 +1,21 @@
 $(document).ready(function() {
-	
+	//header
 	$('.header-btn').on("click", function() {
 		$('.header-btn').toggleClass('active')
 		$('.header-menu').toggleClass('active')
+		$('.header-search__content-wrapper').removeClass('active')
 	})
 	
+	$('.header-search').on("click", function() {
+		$('.header-search__content-wrapper').toggleClass('active')
+		$('.header-search__content-wrapper').on("click", function(e){
+			e.stopPropagation()
+		})
+		$('.header-menu').removeClass('active')
+		$('.header-btn').removeClass('active')
+	})
 	
+	// свайпер
 	$('#shops').on('click', function(){
 		$('#shops').addClass('active')
 		$('#swiper-shops').addClass('active')
