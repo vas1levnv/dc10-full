@@ -43,7 +43,7 @@ $(document).ready(function() {
 		$('#swiper-food').removeClass('active')
 	})
 	
-	const swiper = new Swiper('.swiper', {
+	const swiper = new Swiper('.swiperHome', {
 		slidesPerView: 2.2,
 		spaceBetween: 6,
 		loop: true,
@@ -69,4 +69,24 @@ $(document).ready(function() {
 	})
 	
 	$('.shop__button_loading').prop('disabled', true);
+	
+	
+	//about
+	const swiperAbout = new Swiper('.swiperAbout', {
+		slidesPerView: 1,
+		spaceBetween: 6,
+		loop: true,
+		navigation: {
+			nextEl: '#swiperAbout-next',
+			prevEl: '#swiperAbout-prev',
+		},
+		pagination: {
+			el: '#swiperAbout-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		breakpoints: {
+		
+		}
+	})
 })
