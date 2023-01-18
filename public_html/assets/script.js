@@ -74,7 +74,6 @@ $(document).ready(function() {
 	//about
 	const swiperAbout = new Swiper('.swiperAbout', {
 		slidesPerView: 1,
-		spaceBetween: 6,
 		loop: true,
 		navigation: {
 			nextEl: '#swiperAbout-next',
@@ -86,7 +85,10 @@ $(document).ready(function() {
 			clickable: true,
 		},
 		breakpoints: {
-		
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 13,
+			},
 		}
 	})
 })
