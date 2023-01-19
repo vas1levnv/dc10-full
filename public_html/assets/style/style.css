@@ -1346,6 +1346,36 @@ h3 {
   margin: 0 30px 60px;
   position: relative;
 }
+.swiperAbout-wrapper .swiper-button-prev:after, .swiperAbout-wrapper .swiper-button-next:after {
+  content: "" !important;
+  background: url("../img/arrow.svg") no-repeat center !important;
+  width: 16px !important;
+  height: 40px !important;
+}
+.swiperAbout-wrapper .swiper-button-prev {
+  left: -30px !important;
+}
+.swiperAbout-wrapper .swiper-button-next {
+  transform: rotate(180deg);
+  right: -30px !important;
+}
+.swiperAbout-wrapper .swiper-pagination {
+  bottom: -30px !important;
+}
+.swiperAbout-wrapper .swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background: #000000 !important;
+  opacity: 1 !important;
+}
+.swiperAbout-wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  width: 16px !important;
+  height: 16px !important;
+  border: 2px solid #000000;
+  background: white !important;
+  position: relative;
+  top: 3px;
+}
 .swiperAbout .swiper-slide {
   height: 40vw;
   overflow: hidden;
@@ -1356,4 +1386,21 @@ h3 {
      object-fit: cover;
   height: 100%;
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .swiperAbout {
+    margin: 20px 30px 80px;
+  }
+  .swiperAbout .swiper-slide {
+    max-height: 167px;
+  }
+}
+@media (min-width: 1024px) {
+  .swiperAbout {
+    margin: 40px 30px 100px;
+  }
+  .swiperAbout .swiper-slide {
+    max-height: 215px;
+  }
 }

@@ -1670,20 +1670,76 @@ h3 {
 }
 
 .swiperAbout {
-	
 	&-wrapper {
 		margin: 0 30px 60px;
 		position: relative;
+		
+		& .swiper-button-prev, & .swiper-button-next {
+			&:after {
+				content: '' !important;
+				background: url('../img/arrow.svg') no-repeat center !important;
+				width: 16px !important;
+				height: 40px !important;
+			}
+		}
+		
+		& .swiper-button-prev {
+			left: -30px !important;
+		}
+		
+		& .swiper-button-next {
+			transform: rotate(180deg);
+			right: -30px !important;
+		}
+		
+		& .swiper-pagination {
+			bottom: -30px !important;
+			
+			&-bullet {
+				width: 10px !important;
+				height: 10px !important;
+				background: $black !important;
+				opacity: 1 !important;
+				
+				&.swiper-pagination-bullet-active{
+					width: 16px !important;
+					height: 16px !important;
+					border: 2px solid $black;
+					background: white !important;
+					position: relative;
+					top: 3px;
+				}
+			}
+		}
 	}
 	
 	& .swiper-slide {
 		height: 40vw;
 		overflow: hidden;
 		border-radius: 10px;
+		
 		& img {
 			object-fit: cover;
 			height: 100%;
 			width: 100%;
+		}
+	}
+}
+
+@media (min-width: $m) {
+	.swiperAbout {
+		margin: 20px 30px 80px;
+		& .swiper-slide {
+			max-height: 167px;
+		}
+	}
+}
+
+@media (min-width: $l) {
+	.swiperAbout {
+		margin: 40px 30px 100px;
+		& .swiper-slide {
+			max-height: 215px;
 		}
 	}
 }
