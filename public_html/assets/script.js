@@ -91,4 +91,31 @@ $(document).ready(function() {
 			},
 		}
 	})
+	
+	
+		// схема
+	const swiperScheme = new Swiper('.swiperScheme', {
+		slidesPerView: 1,
+		loop: true,
+		navigation: {
+			nextEl: '#swiperScheme-next',
+			prevEl: '#swiperScheme-prev',
+		},
+		pagination: {
+			el: '#swiperScheme-pagination',
+			clickable: true,
+			type: 'bullets',
+			renderBullet: function (index, className) {
+				return '<span class="' + className + '">' + (index + 1) + "</span>";
+			},
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 13,
+			},
+		}
+	})
+	
+	
 })

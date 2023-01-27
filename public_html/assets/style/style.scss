@@ -1005,6 +1005,8 @@ h3 {
 			font-size: 12px;
 			line-height: 14px;
 			margin-top: 15px;
+			align-items: center;
+			text-align: left;
 			
 			& input[type=checkbox] {
 				position: relative;
@@ -1018,7 +1020,7 @@ h3 {
 				position: absolute;
 				width: 20px;
 				height: 20px;
-				top: -6px;
+				top: -2px;
 				left: 0;
 				background-color: white;
 				border: 1px solid $black;
@@ -1035,7 +1037,7 @@ h3 {
 				-ms-transform: rotate(45deg);
 				transform: rotate(45deg);
 				position: absolute;
-				top: -2px;
+				top: 2px;
 				left: 8px;
 			}
 			
@@ -1135,6 +1137,7 @@ h3 {
 			font-size: 12px;
 			line-height: 14px;
 			margin-top: 5px;
+			align-items: center;
 			
 			& input[type=checkbox] {
 				position: relative;
@@ -1148,7 +1151,7 @@ h3 {
 				position: absolute;
 				width: 20px;
 				height: 20px;
-				top: -6px;
+				top: -2px;
 				left: 0;
 				background-color: #e9e9e9;
 			}
@@ -1164,7 +1167,7 @@ h3 {
 				-ms-transform: rotate(45deg);
 				transform: rotate(45deg);
 				position: absolute;
-				top: -2px;
+				top: 2px;
 				left: 8px;
 			}
 			
@@ -1701,7 +1704,7 @@ h3 {
 				background: $black !important;
 				opacity: 1 !important;
 				
-				&.swiper-pagination-bullet-active{
+				&.swiper-pagination-bullet-active {
 					width: 16px !important;
 					height: 16px !important;
 					border: 2px solid $black;
@@ -1729,6 +1732,7 @@ h3 {
 @media (min-width: $m) {
 	.swiperAbout {
 		margin: 20px 30px 80px;
+		
 		& .swiper-slide {
 			max-height: 167px;
 		}
@@ -1738,8 +1742,30 @@ h3 {
 @media (min-width: $l) {
 	.swiperAbout {
 		margin: 40px 30px 100px;
+		
 		& .swiper-slide {
 			max-height: 215px;
 		}
+	}
+}
+
+.scheme {
+	position: relative;
+	padding: 60px 0;
+	
+	& .swiper-pagination-bullet {
+		width: 20px;
+		height: 20px;
+		text-align: center;
+		line-height: 20px;
+		font-size: 12px;
+		color: #000;
+		opacity: 1;
+		background: rgba(0, 0, 0, 0.2);
+	}
+	
+	& .swiper-pagination-bullet-active {
+		color: #fff;
+		background: #007aff;
 	}
 }
